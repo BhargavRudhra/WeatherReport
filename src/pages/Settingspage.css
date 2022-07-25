@@ -1,5 +1,6 @@
 .settings-main-content{
     display: flex;
+    --background: white;
 }
 .settings-row{
     display: flex;
