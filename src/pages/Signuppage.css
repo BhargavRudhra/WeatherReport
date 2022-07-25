@@ -1,0 +1,93 @@
+.signup-main-content{
+    display: flex;
+    --background: rgb(42, 42, 67);
+}
+.signup-main-grid{
+    height: 100vh;
+    justify-content: space-around;
+    padding: 30px;
+}
+.signup-weather-image-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.signup-weather-avathar{
+    display: flex;
+    width: 160px;
+    height: 160px;
+}
+.signup-header-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.signup-header-label{
+    display: flex;
+    color: aliceblue;
+    font-size: xx-large;
+}
+.signup-input-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.signup-uname-input{
+    display: flex;
+    color: black;
+    margin-top: 25px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.signup-email-input{
+    display: flex;
+    color: black;
+    margin-top: 25px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.signup-number-input{
+    display: flex;
+    color: black;
+    margin-top: 25px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.signup-password-input{
+    display: flex;
+    color: black;
+    margin-top: 25px;
+    border-radius: 5px;
+    height: 40px;
+    text-align: center;
+    background-color: aliceblue;
+}
+.signup-button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.signup-button{
+    display: flex;
+    color: black;
+    width: 110px;
+}
+.signup-text-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.signup-text{
+    color: black;
+}
+.signup-login-text{
+    color: rgb(192, 189, 189);
+}

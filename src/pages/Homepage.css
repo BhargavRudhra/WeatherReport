@@ -1,0 +1,13 @@
+.home-main-content{
+    display: flex;
+    --background:url(../assets/weatherimage.jpg) ;
+}
+.home-main-grid{
+    height: 100vh;
+    justify-content: space-around;
+    padding: 30px;
+}
+.home-icon-row{
+    display: flex;
+    justify-content: flex-end;
+}

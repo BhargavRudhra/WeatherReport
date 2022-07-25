@@ -1,0 +1,55 @@
+.getstarted-main-content{
+    --background: rgb(42, 42, 67);
+}
+.image-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+.getstarted-weather-avathar{
+    display: flex;
+    width: 160px;
+    height: 160px;
+}
+.weatherimage{
+    display: flex;
+}
+.label-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.label1-content{
+    display: flex;
+    font-size: xx-large;
+    color: aliceblue;
+}
+.label2-content{
+    display: flex;
+    font-size: xx-large;
+    color: aliceblue;
+}
+.text-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.weather-text1{
+    display: flex;
+    color: rgb(192, 189, 189);
+}
+.weather-text2{
+    display: flex;
+    color: rgb(192, 189, 189);
+}
+.getstarted-button-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.getstarted-button{
+    display: flex;
+    font-size: medium;
+    width: 210px;
+    height: 40px;
+}
