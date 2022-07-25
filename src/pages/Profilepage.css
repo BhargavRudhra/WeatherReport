@@ -1,0 +1,39 @@
+.profile-main-content{
+    display: flex;
+    --background: white;
+}
+.profile-row{
+    display: flex;
+    margin-top: 45px;
+}
+.profile-arrow-back-icon{
+    display: flex;
+    margin-right: 30px;
+    color: black;
+}
+.profile-col{
+    display: flex;
+    font-size: 25px;
+    margin-right: 140px;
+    color: black;
+}
+.profile-avatar{
+    display: flex;
+    width: 70px;
+    height: 70px;
+    margin-left: 15px;
+}
+.username-row{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: large;
+    color: black;
+}
+.useremail-row{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-size: small;
+    color: black;
+}

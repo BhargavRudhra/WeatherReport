@@ -10,6 +10,7 @@ import Login from "./pages/Loginpage";
 import Signup from "./pages/Signuppage";
 import Home from "./pages/Homepage";
 import Settings from "./pages/Settingspage";
+import UserProfile from "./pages/Profilepage";
 import { AuthContextProvider } from "./context/AuthContext";
 // import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 
@@ -56,6 +57,9 @@ const App = () => {
             </Route>
             <Route path ="/settingspage">
               <Settings />
+            </Route>
+            <Route path="/profilepage">
+              <UserProfile />
             </Route>
           </IonRouterOutlet>
         </IonReactRouter>

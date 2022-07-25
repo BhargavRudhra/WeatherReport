@@ -21,7 +21,7 @@ import Googleimage from "../assets/google-icon.jpg";
 import facebook from "../assets/fac.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
-
+import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
  const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,6 +30,7 @@ import { UserAuth } from "../context/AuthContext";
   const [presentAlert] = useIonAlert();
   const [presentloading, dismissloading] = useIonLoading();
   const { signin } = UserAuth();
+  const {setGoogleUser} = UserAuth();
   const router = useIonRouter();
   const clearInputs = () => {
     setEmail("");
@@ -63,6 +64,22 @@ import { UserAuth } from "../context/AuthContext";
     });
   }
 
+  const GoogleLogin = async () => {
+    presentloading({
+      message: "Loggingin!..",
+      duration:2000,
+      spinner: "lines-small",
+    });
+    GoogleAuth.initialize();
+    const result = await GoogleAuth.signIn();
+    console.log(result);
+    setGoogleUser(result);
+    if(result){
+      router.push("/Homepage");
+      dismissloading();
+      handleButtonClick("Successfully Login");
+    }
+  };
   const handleSubmit = async (e) => {
     var atposition = email.indexOf("@");
     var dotposition = email.lastIndexOf(".");
@@ -148,7 +165,7 @@ import { UserAuth } from "../context/AuthContext";
           <IonRow className="img-button-row">
             <IonCol className="google-col">
               <IonAvatar className="avathar">
-                <IonImg className="google-image" src={Googleimage} />
+                <IonImg className="google-image" src={Googleimage} onClick={GoogleLogin} />
               </IonAvatar>
             </IonCol>
             <IonCol className="facebook-col">
