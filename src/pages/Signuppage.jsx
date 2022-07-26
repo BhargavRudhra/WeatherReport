@@ -24,7 +24,6 @@ const Signup = () => {
   const [presentAlert] = useIonAlert();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const [setError] = useState("");
   const [presentloading, dismissloading] = useIonLoading();
@@ -33,7 +32,6 @@ const Signup = () => {
   const clearInputs = () => {
     setUsername("");
     setEmail("");
-    setMobile("");
     setPassword("");
   };
   const Loginin = () => {
@@ -66,9 +64,7 @@ const Signup = () => {
       handleButtonClick("Please enter User Name");
     } else if (email == null || email === "") {
       handleButtonClick("Please enter Email");
-    } else if (mobile == null || mobile === "") {
-      handleButtonClick("Please enter Mobile Number");
-    } else if (password == null || password === "") {
+    }  else if (password == null || password === "") {
       handleButtonClick("Please enter Password");
     } else if (password.length < 5) {
       handleButtonClick("Password must have minimum 5 characters");
@@ -124,13 +120,6 @@ const Signup = () => {
               className="signup-email-input"
               placeholder="Email"
               type="email"
-            ></IonInput>
-            <IonInput
-              onIonChange={(e) => setMobile(e.target.value)}
-              value={mobile}
-              className="signup-number-input"
-              placeholder="Mobile Number"
-              type="number"
             ></IonInput>
             <IonInput
               onIonChange={(e) => setPassword(e.target.value)}

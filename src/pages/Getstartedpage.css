@@ -31,15 +31,17 @@
 }
 .text-row{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     margin-top: 50px;
 }
 .weather-text1{
     display: flex;
+    justify-content: center;
     color: rgb(192, 189, 189);
 }
 .weather-text2{
     display: flex;
+    justify-content: center;
     color: rgb(192, 189, 189);
 }
 .getstarted-button-row{

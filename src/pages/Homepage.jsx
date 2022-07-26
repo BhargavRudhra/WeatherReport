@@ -5,6 +5,7 @@ import {
   IonRow,
   IonIcon,
   useIonRouter,
+  IonLabel,
 } from "@ionic/react";
 import "./Homepage.css";
 import { ellipsisVerticalOutline } from "ionicons/icons";
@@ -25,6 +26,9 @@ const Home = () => {
               color="lightwhite"
               onClick={Settings}
             />
+          </IonRow>
+          <IonRow className="Welcome-text-row">
+            <IonLabel className="label-text"> Welcome To Weather Report </IonLabel>
           </IonRow>
         </IonGrid>
       </IonContent>

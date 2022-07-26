@@ -11,3 +11,13 @@
     display: flex;
     justify-content: flex-end;
 }
+.Welcome-text-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+.label-text{
+    display: flex;
+    color: white;
+    font-size: x-large;
+}

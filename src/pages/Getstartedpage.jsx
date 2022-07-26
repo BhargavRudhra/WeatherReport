@@ -32,11 +32,11 @@ const Getstarted = () => {
           <IonRow className="text-row">
             <IonText className="weather-text1">
               {" "}
-              Easy steps to pridict the weather{" "}
+              Easy steps to pridict the weather {" "}
             </IonText>
             <IonText className="weather-text2">
               {" "}
-              and make your day easier{" "}
+               and make your day easier{" "}
             </IonText>
           </IonRow>
           <IonRow className="getstarted-button-row">

@@ -17,7 +17,7 @@ import {
 } from "@ionic/react";
 import "./Loginpage.css";
 import weatherimage from "../assets/weatherimage.png";
-import Googleimage from "../assets/google-icon.jpg";
+import Googlebutton from "../assets/google-icon.jpg";
 import facebook from "../assets/fac.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
@@ -131,7 +131,7 @@ import { UserAuth } from "../context/AuthContext";
               type="submit"
               className="login-button"
               shape="round"
-              color="lightwhite"
+              color="fullwhite"
             >
               {" "}
               Login{" "}
@@ -145,17 +145,11 @@ import { UserAuth } from "../context/AuthContext";
               here{" "}
             </IonText>
           </IonRow>
-          <IonRow className="img-button-row">
-            <IonCol className="google-col">
-              <IonAvatar className="avathar">
-                <IonImg className="google-image" src={Googleimage} />
-              </IonAvatar>
-            </IonCol>
-            <IonCol className="facebook-col">
-              <IonAvatar className="avathar">
-                <IonImg className="facebook-image" src={facebook} />
-              </IonAvatar>
-            </IonCol>
+          <IonRow className="or-text-row">
+            <IonText className="or-text"> or </IonText>
+          </IonRow>
+          <IonRow className="google-button-row">
+             <IonAvatar className="google-avatar"><IonImg className="google-image" src={Googlebutton} /></IonAvatar>
           </IonRow>
         </IonGrid>
       </IonContent>

@@ -32,7 +32,7 @@
 }
 .login-input-row{
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,6 @@
     margin-top: 25px;
     border-radius: 7px;
     height: 40px;
-    /* width: 10px; */
     background-color: aliceblue;
     text-align: center;
 }
@@ -74,25 +73,26 @@
     margin-top: 25px;
 }
 .login-text{
-    color: black;
-}
-.login-signup-text{
     color: rgb(192, 189, 189);
 }
-.img-button-row{
+.login-signup-text{
+    color: rgb(154, 154, 200);
+}
+.or-text-row{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
-.google-col{
+.or-text{
+    display: flex;
+    color: rgb(154, 154, 200);
+}
+.google-button-row{
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
-.facebook-col{
+.google-avatar{
     display: flex;
-    justify-content: center;
-}
-.avathar{
-    display: flex;
-    padding: 14px;
+    padding: 8px;
 }
