@@ -3,6 +3,8 @@ import {
   IonApp,
   IonRouterOutlet,
   setupIonicReact,
+  useIonAlert,
+  useIonToast,
 } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Getstarted from "./pages/Getstartedpage";
@@ -12,17 +14,18 @@ import Home from "./pages/Homepage";
 import Settings from "./pages/Settingspage";
 import UserProfile from "./pages/Profilepage";
 import { AuthContextProvider } from "./context/AuthContext";
+// import { db } from "./firebase";
+// import { doc, getDoc } from "firebase/firestore";
+// import { Browser } from "@capacitor/browser";
+// import { App as app } from "@capacitor/app";
 // import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 
-/* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 
-/* Basic CSS for apps built with Ionic */
 import "@ionic/react/css/normalize.css";
 import "@ionic/react/css/structure.css";
 import "@ionic/react/css/typography.css";
 
-/* Optional CSS utils that can be commented out */
 import "@ionic/react/css/padding.css";
 import "@ionic/react/css/float-elements.css";
 import "@ionic/react/css/text-alignment.css";
@@ -30,11 +33,27 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
-/* Theme variables */
 import "./theme/variables.css";
+// import { useState } from "react";
 setupIonicReact();
 
 const App = () => {
+  // const [updateDetails,setUpdateDetails] = useState({});
+  // const [appVersion,setAppVersion] = useState("");
+
+  // const  updateRef = doc(db,"WeatherReport_app_config", "sfkh4b3AnbkZ4RqfjSXk");
+  // const [presentAlert] = useIonAlert();
+  // const [present] = useIonToast();
+  // const handleToast = (msg) => {
+  //   present({
+  //     message: msg,
+  //     position: "top",
+  //     animated: true,
+  //     duration : 2000,
+  //     color: "lightwhite",
+  //     mode: "ios",
+  //   });
+  // };
   return (
     <AuthContextProvider>
       <IonApp>

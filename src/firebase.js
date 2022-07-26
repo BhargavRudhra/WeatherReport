@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
+import {getAuth} from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyCcFvJ5W2wjkvT8ZWU_Hq4U_IAz4MbQ9Ig",
   authDomain: "weatherreport-f46e3.firebaseapp.com",
@@ -10,4 +11,5 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 export const auth =getAuth(app);
+export const db = getFirestore(app);
 export default app;
