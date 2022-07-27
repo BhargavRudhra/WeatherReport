@@ -31,6 +31,7 @@ const UserProfile = () => {
               className="profile-arrow-back-icon"
               icon={arrowBack}
               size="large"
+              color="fullblack"
               onClick={routeToSettingsPage}
             />
           </IonCol>

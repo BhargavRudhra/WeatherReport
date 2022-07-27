@@ -38,7 +38,7 @@ const Getstarted = () => {
           <IonRow className="getstarted-button-row">
             <IonButton
               className="getstarted-button"
-              color="lightwhite"
+              color="fullwhite"
               shape="round"
               href="/Loginpage"
             >

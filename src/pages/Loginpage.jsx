@@ -145,7 +145,7 @@ const Login = () => {
               type="submit"
               className="login-button"
               shape="round"
-              color="lightwhite"
+              color="fullwhite"
             >
               Login
             </IonButton>
@@ -153,14 +153,14 @@ const Login = () => {
           <IonRow className="login-text-row">
             <IonText className="login-text">
               If you don't have account?
-              <IonText className="login-signup-text" onClick={Signup}>
-                SignUp
-              </IonText>
+              <IonText className="login-signup-text" onClick={Signup}> SignUp </IonText>
               here
             </IonText>
           </IonRow>
-          <IonRow className="img-button-row">
-            <IonCol className="google-col">
+          <IonRow className="or-text-row">
+            <IonText className="or-text"> or </IonText>
+          </IonRow>
+          <IonRow className="google-button-row">
               <IonAvatar className="avathar">
                 <IonImg
                   className="google-image"
@@ -168,12 +168,6 @@ const Login = () => {
                   onClick={GoogleLogin}
                 />
               </IonAvatar>
-            </IonCol>
-            <IonCol className="facebook-col">
-              <IonAvatar className="avathar">
-                <IonImg className="facebook-image" src={facebook} />
-              </IonAvatar>
-            </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>

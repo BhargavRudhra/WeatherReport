@@ -57,14 +57,13 @@ const Settings = () => {
               icon={arrowBack}
               size="large"
               onClick={Home}
-              color="black"
+              color="fullblack"
             />
           </IonCol>
           <IonCol className="settings-col">Settings</IonCol>
         </IonRow>
         <IonGrid className="settings-grid">
           <IonRow className="settings-grid-row" onClick={routeToProfilepage}>
-            
             Profile
           </IonRow>
           <IonRow className="settings-grid-row" onClick={handleLogout}>

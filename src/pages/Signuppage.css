@@ -20,7 +20,7 @@
 .signup-header-row {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 .signup-header-label {
   display: flex;
@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .signup-uname-input {
   display: flex;
@@ -46,7 +46,7 @@
 .signup-email-input {
   display: flex;
   color: black;
-  margin-top: 25px;
+  margin-top: 30px;
   border-radius: 5px;
   height: 40px;
   text-align: center;
@@ -55,7 +55,7 @@
 .signup-number-input {
   display: flex;
   color: black;
-  margin-top: 25px;
+  margin-top: 30px;
   border-radius: 5px;
   height: 40px;
   text-align: center;
@@ -64,7 +64,7 @@
 .signup-password-input {
   display: flex;
   color: black;
-  margin-top: 25px;
+  margin-top: 30px;
   border-radius: 5px;
   height: 40px;
   text-align: center;
@@ -83,11 +83,13 @@
 .signup-text-row {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 .signup-text {
-  color: black;
+  color: rgb(192, 189, 189);
+  /* color: black; */
 }
 .signup-login-text {
-  color: rgb(192, 189, 189);
+  color: rgb(154, 154, 200);
+  /* color: rgb(192, 189, 189); */
 }
