@@ -148,7 +148,7 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
               type="submit"
               className="login-button"
               shape="round"
-              color="lightwhite"
+              color="fullwhite"
             >
               {" "}
               Login{" "}
@@ -162,17 +162,13 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
               here{" "}
             </IonText>
           </IonRow>
-          <IonRow className="img-button-row">
-            <IonCol className="google-col">
-              <IonAvatar className="avathar">
+          <IonRow className="or-text-row">
+            <IonText className="or-text"> or </IonText>
+          </IonRow>
+          <IonRow className="google-button-row">
+              <IonAvatar className="google-avatar">
                 <IonImg className="google-image" src={Googleimage} onClick={GoogleLogin} />
               </IonAvatar>
-            </IonCol>
-            <IonCol className="facebook-col">
-              <IonAvatar className="avathar">
-                <IonImg className="facebook-image" src={facebook} />
-              </IonAvatar>
-            </IonCol>
           </IonRow>
         </IonGrid>
       </IonContent>
