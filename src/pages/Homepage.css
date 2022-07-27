@@ -5,9 +5,126 @@
 .home-main-grid{
     height: 100vh;
     justify-content: space-around;
-    padding: 30px;
+    padding: 9px;
 }
-.home-icon-row{
+.dotted-icon-row{
     display: flex;
     justify-content: flex-end;
+    margin-top: 30px;
+}
+.header-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search-input{
+    display: flex;
+    text-align: center;
+    width: 240px;
+    margin-left: 25px;
+    border-radius: 15px;
+    background: #fff7;
+}
+.search-button{
+    display: flex;
+    width: 70px;
+    height: 35px;
+    color: black;
+}
+.temperature-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.temperature-label{
+    display: flex;
+    font-size: 7vh;
+    color: #ffff;
+}
+.weather-description-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.weather-description-label{
+    display: flex;
+    font-size: large;
+    color: #ffff;
+}
+.city-name-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.city-name-label{
+    display: flex;
+    font-size: 6vh;
+    color: #fff9;
+}
+.cards-row{
+    display: flex;
+    margin-top: 200px;
+}
+.humidity-card{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100px;
+    background:#fff8;
+}
+.weather-humidity-row{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.weather-humidity-label{
+    display: flex;
+    margin-top: 10px;
+    font-size: x-large;
+}
+.humidity-text{
+    display: flex;
+    font-size: large;
+}
+.wind-speed-card{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100px;
+    background:#fff8;
+}
+.wind-speed-row{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.wind-speed-label{
+    display: flex;
+    margin-top: 10px;
+    font-size: x-large;
+}
+.Winds-text{
+    display: flex;
+    font-size: large;
+}
+.feels-like-card{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100px;
+    background:#fff8;
+}
+.feels-like-row{
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+.feels-like-label{
+    display: flex;
+    margin-top: 10px;
+    font-size: x-large;
+}
+.feels-like-text{
+    display: flex;
+    font-size: large;
 }

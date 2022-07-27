@@ -12,12 +12,10 @@ import "./Settingspage.css";
 import { arrowBack } from "ionicons/icons";
 import { UserAuth } from "../context/AuthContext";
 import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
-
 const Settings = () => {
   const { logout } = UserAuth();
   const router = useIonRouter();
   const [present] = useIonToast();
-
   async function handleButtonClick(message) {
     present({
       color: "black",
@@ -32,14 +30,14 @@ const Settings = () => {
     router.push("/Homepage");
   };
   const routeToProfilepage = () => {
-    router.push("/Profilepage")
+    router.push("/Profilepage");
   };
   const handleLogout = async () => {
     try {
-      if (GoogleAuth){
+      if (GoogleAuth.initialize) {
         await GoogleAuth.signOut();
-      router.push("/Loginpage");
-      handleButtonClick("Successfully Loggedout");
+        router.push("/Loginpage");
+        handleButtonClick("Successfully Loggedout");
       } else {
         await logout();
         router.push("/Loginpage");
@@ -65,15 +63,16 @@ const Settings = () => {
           <IonCol className="settings-col">Settings</IonCol>
         </IonRow>
         <IonGrid className="settings-grid">
-          <IonRow className="settings-grid-row" onClick={routeToProfilepage}> Profile </IonRow>
+          <IonRow className="settings-grid-row" onClick={routeToProfilepage}>
+            
+            Profile
+          </IonRow>
           <IonRow className="settings-grid-row" onClick={handleLogout}>
-            {" "}
-            Logout{" "}
+            Logout
           </IonRow>
         </IonGrid>
       </IonContent>
     </IonPage>
   );
 };
-
 export default Settings;

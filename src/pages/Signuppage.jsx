@@ -18,7 +18,6 @@ import "./Signuppage.css";
 import weatherimage from "../assets/weatherimage.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
-
 const Signup = () => {
   const [present] = useIonToast();
   const [presentAlert] = useIonAlert();
@@ -97,7 +96,6 @@ const Signup = () => {
       }
     }
   };
-
   return (
     <IonPage>
       <IonContent className="signup-main-content">
@@ -148,19 +146,16 @@ const Signup = () => {
               type="submit"
               onClick={handleSubmit}
             >
-              {" "}
-              SignUp{" "}
+              SignUp
             </IonButton>
           </IonRow>
           <IonRow className="signup-text-row">
             <IonText className="signup-text">
-              {" "}
-              Have an account ?{" "}
+              Have an account ?
               <IonText className="signup-login-text" onClick={Loginin}>
-                {" "}
-                Login{" "}
-              </IonText>{" "}
-              here{" "}
+                Login
+              </IonText>
+              here
             </IonText>
           </IonRow>
         </IonGrid>
@@ -168,5 +163,4 @@ const Signup = () => {
     </IonPage>
   );
 };
-
 export default Signup;

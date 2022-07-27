@@ -1,98 +1,97 @@
-.login-main-content{
-    display: flex;
-    --background: rgb(42, 42, 67);
+.login-main-content {
+  display: flex;
+  --background: rgb(42, 42, 67);
 }
-.login-main-grid{
-    height: 100vh;
-    justify-content: space-around;
-    padding: 30px;
+.login-main-grid {
+  height: 100vh;
+  justify-content: space-around;
+  padding: 30px;
 }
-.login-weather-image-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+.login-weather-image-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-.login-weather-avathar{
-    display: flex;
-    width: 160px;
-    height: 160px;
+.login-weather-avathar {
+  display: flex;
+  width: 160px;
+  height: 160px;
 }
-.login-weather-image{
-    display: flex;
+.login-weather-image {
+  display: flex;
 }
-.login-header-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+.login-header-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
-.login-header-label{
-    display: flex;
-    color: aliceblue;
-    font-size: xx-large;
+.login-header-label {
+  display: flex;
+  color: aliceblue;
+  font-size: xx-large;
 }
-.login-input-row{
-    display: flex;
-    margin-top: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.login-input-row {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.login-email-input{
-    display: flex;
-    color: black;
-    font-size: larger;
-    margin-top: 25px;
-    border-radius: 7px;
-    height: 40px;
-    /* width: 10px; */
-    background-color: aliceblue;
-    text-align: center;
+.login-email-input {
+  display: flex;
+  color: black;
+  font-size: larger;
+  margin-top: 25px;
+  border-radius: 7px;
+  height: 40px;
+  background-color: aliceblue;
+  text-align: center;
 }
-.login-password-input{
-    display: flex;
-    color: black;
-    font-size: larger;
-    margin-top: 25px;
-    border-radius: 7px;
-    height: 40px;
-    background-color: aliceblue;
-    text-align: center;
+.login-password-input {
+  display: flex;
+  color: black;
+  font-size: larger;
+  margin-top: 25px;
+  border-radius: 7px;
+  height: 40px;
+  background-color: aliceblue;
+  text-align: center;
 }
-.login-button-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
+.login-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
-.login-button{
-    display: flex;
-    color: black;
-    width: 110px;
+.login-button {
+  display: flex;
+  color: black;
+  width: 110px;
 }
-.login-text-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
+.login-text-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
-.login-text{
-    color: black;
+.login-text {
+  color: black;
 }
-.login-signup-text{
-    color: rgb(192, 189, 189);
+.login-signup-text {
+  color: rgb(192, 189, 189);
 }
-.img-button-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.img-button-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
-.google-col{
-    display: flex;
-    justify-content: center;
+.google-col {
+  display: flex;
+  justify-content: center;
 }
-.facebook-col{
-    display: flex;
-    justify-content: center;
+.facebook-col {
+  display: flex;
+  justify-content: center;
 }
-.avathar{
-    display: flex;
-    padding: 14px;
+.avathar {
+  display: flex;
+  padding: 14px;
 }

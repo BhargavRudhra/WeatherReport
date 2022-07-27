@@ -4,6 +4,7 @@ import {
   IonContent,
   IonIcon,
   IonImg,
+  IonLabel,
   IonPage,
   IonRow,
   useIonRouter,
@@ -11,7 +12,6 @@ import {
 import { UserAuth } from "../context/AuthContext";
 import { arrowBack } from "ionicons/icons";
 import "./Profilepage.css";
-
 const UserProfile = () => {
   const { googleuser } = UserAuth();
   console.log(googleuser.email);
@@ -36,14 +36,21 @@ const UserProfile = () => {
           </IonCol>
           <IonCol className="profile-col"> Profile </IonCol>
         </IonRow>
-        <IonAvatar className="profile-avatar">
-          <IonImg className="profile-image" src={googleuser.imageUrl} />{" "}
-        </IonAvatar>
+        {googleuser.imageUrl && (
+          <IonAvatar className="profile-avatar">
+            <IonImg className="profile-image" src={googleuser.imageUrl} />
+          </IonAvatar>
+        )}
         <IonRow className="username-row">
-          {" "}
-          {googleuser.familyName} {googleuser.givenName}{" "}
+          { googleuser.givenName  && (
+            <IonLabel>
+              {googleuser.familyName} {googleuser.givenName}
+            </IonLabel>
+          )}
         </IonRow>
-        <IonRow className="useremail-row"> {googleuser.email} </IonRow>
+        <IonRow className="useremail-row">
+          {googleuser.email && <IonLabel>{googleuser.email}</IonLabel>}
+        </IonRow>
       </IonContent>
     </IonPage>
   );

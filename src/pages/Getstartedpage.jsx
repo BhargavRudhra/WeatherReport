@@ -7,11 +7,10 @@ import {
   IonLabel,
   IonPage,
   IonRow,
-  IonText
+  IonText,
 } from "@ionic/react";
 import "./Getstartedpage.css";
 import weatherimage from "../assets/weatherimage.png";
-
 const Getstarted = () => {
   return (
     <IonPage>
@@ -25,18 +24,15 @@ const Getstarted = () => {
           <IonRow className="label-row">
             <IonLabel className="label1-content"> Find your weather </IonLabel>
             <IonLabel className="label2-content">
-              {" "}
-              pridiction in your city{" "}
+              pridiction in your city
             </IonLabel>
           </IonRow>
           <IonRow className="text-row">
             <IonText className="weather-text1">
-              {" "}
-              Easy steps to pridict the weather{" "}
+              Easy steps to pridict the weather
             </IonText>
             <IonText className="weather-text2">
-              {" "}
-              and make your day easier{" "}
+              and make your day easier
             </IonText>
           </IonRow>
           <IonRow className="getstarted-button-row">
@@ -46,8 +42,7 @@ const Getstarted = () => {
               shape="round"
               href="/Loginpage"
             >
-              {" "}
-              Get started{" "}
+              Get started
             </IonButton>
           </IonRow>
         </IonGrid>
@@ -55,5 +50,4 @@ const Getstarted = () => {
     </IonPage>
   );
 };
-
 export default Getstarted;

@@ -22,7 +22,7 @@ import facebook from "../assets/fac.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
- const Login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [setError] = useState("");
@@ -30,23 +30,21 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
   const [presentAlert] = useIonAlert();
   const [presentloading, dismissloading] = useIonLoading();
   const { signin } = UserAuth();
-  const {setGoogleUser} = UserAuth();
+  const { setGoogleUser } = UserAuth();
   const router = useIonRouter();
   const clearInputs = () => {
     setEmail("");
     setPassword("");
   };
-
   const Signup = () => {
     clearInputs();
     router.push("/Signuppage");
   };
-
   async function handleButtonClick(message) {
     present({
       color: "black",
       duration: 2000,
-      position:"Top",
+      position: "Top",
       message: message,
       showCloseButton: true,
       mode: "ios",
@@ -63,18 +61,17 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
       color: "light",
     });
   }
-
   const GoogleLogin = async () => {
     presentloading({
       message: "Loggingin!..",
-      duration:2000,
+      duration: 2000,
       spinner: "lines-small",
     });
     GoogleAuth.initialize();
     const result = await GoogleAuth.signIn();
     console.log(result);
     setGoogleUser(result);
-    if(result){
+    if (result) {
       router.push("/Homepage");
       dismissloading();
       handleButtonClick("Successfully Login");
@@ -95,14 +92,14 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
       dotposition + 2 >= email.length
     ) {
       handleButtonClick("Please enter proper email");
-    }else {
-      try{
+    } else {
+      try {
         presentloading({
           message: "Loggingin..",
           duration: 2000,
           spinner: "lines-small",
         });
-        await signin(email,password);
+        await signin(email, password);
         dismissloading();
         handleButtonClick("Successfully Login");
         clearInputs();
@@ -150,22 +147,26 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
               shape="round"
               color="lightwhite"
             >
-              {" "}
-              Login{" "}
+              Login
             </IonButton>
           </IonRow>
           <IonRow className="login-text-row">
             <IonText className="login-text">
-              {" "}
               If you don't have account?
-              <IonText className="login-signup-text" onClick={Signup}> SignUp </IonText>
-              here{" "}
+              <IonText className="login-signup-text" onClick={Signup}>
+                SignUp
+              </IonText>
+              here
             </IonText>
           </IonRow>
           <IonRow className="img-button-row">
             <IonCol className="google-col">
               <IonAvatar className="avathar">
-                <IonImg className="google-image" src={Googleimage} onClick={GoogleLogin} />
+                <IonImg
+                  className="google-image"
+                  src={Googleimage}
+                  onClick={GoogleLogin}
+                />
               </IonAvatar>
             </IonCol>
             <IonCol className="facebook-col">
@@ -179,5 +180,4 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
     </IonPage>
   );
 };
-
 export default Login;

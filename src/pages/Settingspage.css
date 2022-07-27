@@ -1,28 +1,28 @@
-.settings-main-content{
-    display: flex;
-    --background: white;
+.settings-main-content {
+  display: flex;
+  --background: white;
 }
-.settings-row{
-    display: flex;
-    margin-top: 50px;
+.settings-row {
+  display: flex;
+  margin-top: 50px;
 }
-.settings-col{
-    display: flex;
-    font-size: 25px;
-    margin-right: 140px;
-    color: black;
+.settings-col {
+  display: flex;
+  font-size: 25px;
+  margin-right: 140px;
+  color: black;
 }
-.arrow-back-icon{
-    display: flex;
-    margin-left: 20px;
+.arrow-back-icon {
+  display: flex;
+  margin-left: 20px;
 }
 .settings-grid {
-    background: rgb(249, 247, 247);
-    border-radius: 20px 20px 0 0;
-  }
-  .settings-grid-row {
-    padding: 6%;
-    font-size: 18px;
-    margin-left: 20px;
-    color: black;
-  }
+  background: rgb(249, 247, 247);
+  border-radius: 20px 20px 0 0;
+}
+.settings-grid-row {
+  padding: 6%;
+  font-size: 18px;
+  margin-left: 20px;
+  color: black;
+}
