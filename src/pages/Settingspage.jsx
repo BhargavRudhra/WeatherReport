@@ -3,6 +3,7 @@ import {
   IonContent,
   IonGrid,
   IonIcon,
+  IonLabel,
   IonPage,
   IonRow,
   useIonRouter,
@@ -15,6 +16,7 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
 
 const Settings = () => {
   const { logout } = UserAuth();
+  const {isgooglelogin} = UserAuth();
   const router = useIonRouter();
   const [present] = useIonToast();
 
@@ -34,18 +36,20 @@ const Settings = () => {
   const routeToProfilepage = () => {
     router.push("/Profilepage")
   };
+  
+
+  const handlGoogleLogout = async() => {
+    try {
+      await GoogleAuth.signOut();
+      router.push("/Loginpage");
+    } catch(error){}
+  }
   const handleLogout = async () => {
     try {
-      if (GoogleAuth){
-        await GoogleAuth.signOut();
+      await logout();
       router.push("/Loginpage");
       handleButtonClick("Successfully Loggedout");
-      } else {
-        await logout();
-        router.push("/Loginpage");
-        handleButtonClick("Successfully Loggedout");
-      }
-    } catch (e) {
+      }  catch (e) {
       console.log(e.message);
     }
   };
@@ -66,9 +70,12 @@ const Settings = () => {
         </IonRow>
         <IonGrid className="settings-grid">
           <IonRow className="settings-grid-row" onClick={routeToProfilepage}> Profile </IonRow>
-          <IonRow className="settings-grid-row" onClick={handleLogout}>
-            {" "}
-            Logout{" "}
+          <IonRow className="settings-grid-row">
+            {
+              isgooglelogin ?
+              <IonLabel onClick={handlGoogleLogout}> Logout </IonLabel> :
+              <IonLabel onClick={handleLogout}> Logout </IonLabel>
+            }
           </IonRow>
         </IonGrid>
       </IonContent>

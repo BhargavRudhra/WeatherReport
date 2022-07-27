@@ -31,6 +31,7 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
   const [presentloading, dismissloading] = useIonLoading();
   const { signin } = UserAuth();
   const {setGoogleUser} = UserAuth();
+  const {setIsGoogleLogin,setIsCurrentUser} = UserAuth();
   const router = useIonRouter();
   const clearInputs = () => {
     setEmail("");
@@ -74,6 +75,7 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
     const result = await GoogleAuth.signIn();
     console.log(result);
     setGoogleUser(result);
+    setIsGoogleLogin(true);
     if(result){
       router.push("/Homepage");
       dismissloading();
@@ -103,6 +105,7 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
           spinner: "lines-small",
         });
         await signin(email,password);
+        setIsCurrentUser(email);
         dismissloading();
         handleButtonClick("Successfully Login");
         clearInputs();

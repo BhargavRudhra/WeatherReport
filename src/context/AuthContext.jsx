@@ -13,6 +13,8 @@ const UserContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
   const [googleuser, setGoogleUser] = useState([]);
+  const [isgooglelogin, setIsGoogleLogin] = useState(false);
+  const [iscurrentuser, setIsCurrentUser] = useState([]);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -45,6 +47,10 @@ export const AuthContextProvider = ({ children }) => {
         logout,
         googleuser,
         setGoogleUser,
+        isgooglelogin,
+        setIsGoogleLogin,
+        iscurrentuser,
+        setIsCurrentUser
       }}
     >
       {children}
