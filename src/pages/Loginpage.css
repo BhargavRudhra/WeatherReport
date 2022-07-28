@@ -74,11 +74,9 @@
 }
 .login-text {
   color: rgb(192, 189, 189);
-  /* color: black; */
 }
 .login-signup-text {
   color: rgb(154, 154, 200);
-  /* color: rgb(192, 189, 189); */
 }
 .or-text-row{
   display: flex;

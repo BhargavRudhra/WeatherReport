@@ -2,6 +2,7 @@ import { Redirect, Route } from "react-router-dom";
 import {
   IonApp,
   IonRouterOutlet,
+  isPlatform,
   setupIonicReact,
   useIonAlert,
   useIonToast,
@@ -14,11 +15,11 @@ import Home from "./pages/Homepage";
 import Settings from "./pages/Settingspage";
 import UserProfile from "./pages/Profilepage";
 import { AuthContextProvider } from "./context/AuthContext";
-// import { db } from "./firebase";
-// import { doc, getDoc } from "firebase/firestore";
-// import { Browser } from "@capacitor/browser";
-// import { App as app } from "@capacitor/app";
-// import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
+import { db } from "./firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { Browser } from "@capacitor/browser";
+import { App as app } from "@capacitor/app";
+import ProtectedRoute from "./ProtectedRoute/ProtectedRoute";
 
 import "@ionic/react/css/core.css";
 
@@ -34,26 +35,85 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 import "./theme/variables.css";
-// import { useState } from "react";
+import { useEffect, useState } from "react";
+import { async } from "@firebase/util";
 setupIonicReact();
 
 const App = () => {
-  // const [updateDetails,setUpdateDetails] = useState({});
-  // const [appVersion,setAppVersion] = useState("");
+  const [updateDetails,setUpdateDetails] = useState({});
+  const [appVersion,setAppVersion] = useState("");
 
-  // const  updateRef = doc(db,"WeatherReport_app_config", "sfkh4b3AnbkZ4RqfjSXk");
-  // const [presentAlert] = useIonAlert();
-  // const [present] = useIonToast();
-  // const handleToast = (msg) => {
-  //   present({
-  //     message: msg,
-  //     position: "top",
-  //     animated: true,
-  //     duration : 2000,
-  //     color: "lightwhite",
-  //     mode: "ios",
-  //   });
-  // };
+  const  updateRef = doc(db,"WeatherReport_app_config", "sfkh4b3AnbkZ4RqfjSXk");
+  const [presentAlert] = useIonAlert();
+  const [present] = useIonToast();
+  const handleToast = (msg) => {
+    present({
+      message: msg,
+      position: "top",
+      animated: true,
+      duration : 2000,
+      color: "lightwhite",
+      mode: "ios",
+    });
+  };
+  const handleAlert = (msg, title, btn, appVersion) => {
+    presentAlert({
+      header: title,
+      subHeader: `Version : ${appVersion}`,
+      message: msg,
+      buttons: [
+        {
+          text: btn,
+          role: "Download",
+          handler:async () => {
+            handleToast("Download Clicked");
+            await Browser.open({
+              url: "",
+            });
+          },
+        },
+      ],
+      backdropDismiss: true,
+      translucent: true,
+      animated: true,
+      cssClass: "lp-sp-alert",
+    });
+  };
+  const getAppInfo = async () => {
+    let info = await app.getInfo();
+    return info;
+  };
+  const getConfigData = async () => {
+    const docSnap = await getDoc(updateRef);
+    if (docSnap.exists()){
+      const data = docSnap.data();
+      console.log("Document data:",docSnap.data());
+      setUpdateDetails(data.updateMsg);
+      setAppVersion(data.current);
+    }else {
+      console.log("No such document!");
+    }
+  };
+  const checkUpdate = async () => {
+    try {
+      if (isPlatform("android")) {
+        const currentAppInfo = getAppInfo();
+        if (appVersion > (await currentAppInfo).version) {
+          const msg = updateDetails.msg;
+          const title = updateDetails.title;
+          const btn = updateDetails.btn;
+          handleAlert(msg, title, btn, appVersion);
+        }
+      }
+    } catch (error){}
+  };
+  useEffect(() => {
+    getConfigData();
+    if (isPlatform("android")) {
+      getAppInfo();
+    }
+  }, [0]);
+  checkUpdate();
   return (
     <AuthContextProvider>
       <IonApp>

@@ -3,6 +3,7 @@ import {
   IonContent,
   IonGrid,
   IonIcon,
+  IonLabel,
   IonPage,
   IonRow,
   useIonRouter,
@@ -14,6 +15,7 @@ import { UserAuth } from "../context/AuthContext";
 import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
 const Settings = () => {
   const { logout } = UserAuth();
+  const {isgooglelogin} = UserAuth();
   const router = useIonRouter();
   const [present] = useIonToast();
   async function handleButtonClick(message) {
@@ -32,17 +34,17 @@ const Settings = () => {
   const routeToProfilepage = () => {
     router.push("/Profilepage");
   };
+  const handleGoogleLogout = async() => {
+    try {
+      await GoogleAuth.signOut();
+      router.push("/Loginpage");
+    }catch(error){}
+  }
   const handleLogout = async () => {
     try {
-      if (GoogleAuth.initialize) {
-        await GoogleAuth.signOut();
-        router.push("/Loginpage");
-        handleButtonClick("Successfully Loggedout");
-      } else {
-        await logout();
-        router.push("/Loginpage");
-        handleButtonClick("Successfully Loggedout");
-      }
+      await logout();
+      router.push("/Loginpage");
+      handleButtonClick("Successfully Loggedout");
     } catch (e) {
       console.log(e.message);
     }
@@ -57,7 +59,7 @@ const Settings = () => {
               icon={arrowBack}
               size="large"
               onClick={Home}
-              color="fullblack"
+              color="fullwhite"
             />
           </IonCol>
           <IonCol className="settings-col">Settings</IonCol>
@@ -66,8 +68,12 @@ const Settings = () => {
           <IonRow className="settings-grid-row" onClick={routeToProfilepage}>
             Profile
           </IonRow>
-          <IonRow className="settings-grid-row" onClick={handleLogout}>
-            Logout
+          <IonRow className="settings-grid-row">
+            {
+              isgooglelogin ?
+              <IonLabel onClick={handleGoogleLogout}> Logout </IonLabel> :
+              <IonLabel onClick={handleLogout}> Logout </IonLabel>
+            }
           </IonRow>
         </IonGrid>
       </IonContent>

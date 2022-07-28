@@ -24,12 +24,12 @@ const Getstarted = () => {
           <IonRow className="label-row">
             <IonLabel className="label1-content"> Find your weather </IonLabel>
             <IonLabel className="label2-content">
-              pridiction in your city
+              prediction in your city
             </IonLabel>
           </IonRow>
           <IonRow className="text-row">
             <IonText className="weather-text1">
-              Easy steps to pridict the weather
+              Easy steps to predict the weather
             </IonText>
             <IonText className="weather-text2">
               and make your day easier

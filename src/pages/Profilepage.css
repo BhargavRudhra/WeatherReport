@@ -1,6 +1,6 @@
 .profile-main-content {
   display: flex;
-  --background: white;
+  --background: rgb(96, 96, 125);
 }
 .profile-row {
   display: flex;
@@ -14,26 +14,30 @@
 .profile-col {
   display: flex;
   font-size: 25px;
-  margin-right: 140px;
+  margin-right: 100px;
   color: black;
+}
+.profile-image-row{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 .profile-avatar {
   display: flex;
   width: 70px;
   height: 70px;
-  margin-left: 15px;
 }
 .username-row {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
-  margin-left: 20px;
   font-size: large;
-  color: black;
+  color: white;
 }
 .useremail-row {
   display: flex;
+  justify-content: center;
   margin-top: 5px;
-  margin-left: 20px;
   font-size: small;
-  color: black;
+  color: white;
 }

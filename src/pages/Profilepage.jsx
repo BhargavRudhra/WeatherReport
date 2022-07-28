@@ -13,11 +13,12 @@ import { UserAuth } from "../context/AuthContext";
 import { arrowBack } from "ionicons/icons";
 import "./Profilepage.css";
 const UserProfile = () => {
-  const { googleuser } = UserAuth();
+  const { googleuser,iscurrentuser,isgooglelogin } = UserAuth();
   console.log(googleuser.email);
   console.log(googleuser.familyName);
   console.log(googleuser.givenName);
   console.log(googleuser.imageUrl);
+  console.log(iscurrentuser);
   const router = useIonRouter();
   const routeToSettingsPage = () => {
     router.push("/Settingspage");
@@ -37,20 +38,30 @@ const UserProfile = () => {
           </IonCol>
           <IonCol className="profile-col"> Profile </IonCol>
         </IonRow>
-        {googleuser.imageUrl && (
-          <IonAvatar className="profile-avatar">
+          <IonRow className="profile-image-row">
+          {
+            isgooglelogin ?
+            <IonAvatar className="profile-avatar">
             <IonImg className="profile-image" src={googleuser.imageUrl} />
-          </IonAvatar>
-        )}
+          </IonAvatar> :
+          <IonLabel> Current user </IonLabel>
+          }
+          </IonRow>
         <IonRow className="username-row">
-          { googleuser.givenName  && (
-            <IonLabel>
-              {googleuser.familyName} {googleuser.givenName}
-            </IonLabel>
-          )}
+            {
+              isgooglelogin ?
+              <IonLabel>
+               {googleuser.givenName} {googleuser.familyName}
+            </IonLabel> :
+            <IonLabel> Current user </IonLabel>
+            }
         </IonRow>
         <IonRow className="useremail-row">
-          {googleuser.email && <IonLabel>{googleuser.email}</IonLabel>}
+         {
+          isgooglelogin ?
+          <IonLabel>{googleuser.email}</IonLabel> :
+          <IonLabel> {iscurrentuser} </IonLabel>
+         }
         </IonRow>
       </IonContent>
     </IonPage>

@@ -31,6 +31,7 @@ const Login = () => {
   const [presentloading, dismissloading] = useIonLoading();
   const { signin } = UserAuth();
   const { setGoogleUser } = UserAuth();
+  const {setIsGoogleLogin,setIsCurrentUser} = UserAuth();
   const router = useIonRouter();
   const clearInputs = () => {
     setEmail("");
@@ -71,6 +72,7 @@ const Login = () => {
     const result = await GoogleAuth.signIn();
     console.log(result);
     setGoogleUser(result);
+    setIsGoogleLogin(true);
     if (result) {
       router.push("/Homepage");
       dismissloading();
@@ -100,6 +102,7 @@ const Login = () => {
           spinner: "lines-small",
         });
         await signin(email, password);
+        setIsCurrentUser(email);
         dismissloading();
         handleButtonClick("Successfully Login");
         clearInputs();
@@ -152,7 +155,7 @@ const Login = () => {
           </IonRow>
           <IonRow className="login-text-row">
             <IonText className="login-text">
-              If you don't have account?
+              If you don't have an account?
               <IonText className="login-signup-text" onClick={Signup}> SignUp </IonText>
               here
             </IonText>
@@ -161,7 +164,7 @@ const Login = () => {
             <IonText className="or-text"> or </IonText>
           </IonRow>
           <IonRow className="google-button-row">
-              <IonAvatar className="avathar">
+              <IonAvatar className="google-avatar">
                 <IonImg
                   className="google-image"
                   src={Googleimage}
