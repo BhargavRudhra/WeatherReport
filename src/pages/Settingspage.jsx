@@ -24,7 +24,7 @@ const Settings = () => {
       position: "top",
       message: message,
       showCloseButton: true,
-      mode: "ios",
+      mode: "md",
     });
   }
   const Home = () => {
