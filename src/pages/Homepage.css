@@ -1,130 +1,304 @@
-.home-main-content{
-    display: flex;
-    --background:url(../assets/weatherimage.jpg) ;
+.home-main-content {
+  display: flex;
+  --background: url(../assets/weatherimage.jpg);
+  --background-repeat: no-repeat;
+  height: 100%;
 }
-.home-main-grid{
-    height: 100vh;
-    justify-content: space-around;
-    padding: 9px;
+.home-main-grid {
+  height: 100vh;
+  justify-content: space-around;
+  padding: 9px;
+  background-color: #0004;
 }
-.dotted-icon-row{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
+.homepage-first-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 28px;
 }
-.header-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+.search-input {
+  display: flex;
+  text-align: center;
+  width: 240px;
+  margin-left: 20px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background: #fff7;
 }
-.search-input{
-    display: flex;
-    text-align: center;
-    width: 240px;
-    margin-left: 25px;
-    border-radius: 15px;
-    background: #fff7;
+.search-button {
+  display: flex;
+  width: 70px;
+  height: 35px;
+  color: black;
 }
-.search-button{
-    display: flex;
-    width: 70px;
-    height: 35px;
-    color: black;
+.dotted-icon {
+  display: flex;
+  margin-top: 5px;
 }
-.temperature-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+.city-name-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
-.temperature-label{
-    display: flex;
-    font-size: 7vh;
-    color: #ffff;
+.city-name-label {
+  display: flex;
+  font-size: 3vh;
+  color: #ffff;
 }
-.weather-description-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.date-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
-.weather-description-label{
-    display: flex;
-    font-size: large;
-    color: #ffff;
+.date-label {
+  display: flex;
+  color: #fff9;
 }
-.city-name-row{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
+.temperature-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
-.city-name-label{
-    display: flex;
-    font-size: 6vh;
-    color: #fff9;
+.temperature-label {
+  display: flex;
+  font-size: 7vh;
+  color: #ffff;
 }
-.cards-row{
-    display: flex;
-    margin-top: 150px;
+.weather-description-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
-.humidity-card{
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 100px;
-    background:#fff8;
+.weather-description-label {
+  display: flex;
+  font-size: large;
+  color: #ffff;
 }
-.weather-humidity-row{
-    display: flex;
-    justify-content: center;
-    color: black;
+.sunrise-sunset-row {
+  display: flex;
+  margin-top: 30px;
 }
-.weather-humidity-label{
-    display: flex;
-    margin-top: 10px;
-    font-size: x-large;
+.sunrise-col {
+  display: flex;
+  justify-content: center;
 }
-.humidity-text{
-    display: flex;
-    font-size: large;
+.sunrise-label {
+  display: flex;
+  color: #fff9;
 }
-.wind-speed-card{
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 100px;
-    background:#fff8;
+.sunset-col {
+  display: flex;
+  justify-content: center;
 }
-.wind-speed-row{
-    display: flex;
-    justify-content: center;
-    color: black;
+.sunset-label {
+  display: flex;
+  color: #fff9;
 }
-.wind-speed-label{
-    display: flex;
-    margin-top: 10px;
-    font-size: x-large;
+.hourly-temperature-row {
+  display: flex;
+  margin-top: 20px;
 }
-.Winds-text{
-    display: flex;
-    font-size: large;
+.first-hour-temp-col {
+  display: flex;
+  justify-content: center;
 }
-.feels-like-card{
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 100px;
-    background:#fff8;
+.first-hour-label {
+  display: flex;
+  color: #ffff;
 }
-.feels-like-row{
-    display: flex;
-    justify-content: center;
-    color: black;
+.first-hour-temp-text-col {
+  display: flex;
+  justify-content: center;
 }
-.feels-like-label{
-    display: flex;
-    margin-top: 10px;
-    font-size: x-large;
+.first-hour-temp {
+  display: flex;
+  color: #ffff;
 }
-.feels-like-text{
-    display: flex;
-    font-size: large;
+.second-hour-temp-col {
+  display: flex;
+  justify-content: center;
+}
+.second-hour-label {
+  display: flex;
+  color: #ffff;
+}
+.second-hour-temp-text-col {
+  display: flex;
+  justify-content: center;
+}
+.second-hour-temp {
+  display: flex;
+  color: #ffff;
+}
+.third-hour-temp-col {
+  display: flex;
+  justify-content: center;
+}
+.third-hour-label {
+  display: flex;
+  color: #ffff;
+}
+.third-hour-temp-text-col {
+  display: flex;
+  justify-content: center;
+}
+.third-hour-temp {
+  display: flex;
+  color: #ffff;
+}
+.fourth-hour-temp-col {
+  display: flex;
+  justify-content: center;
+}
+.fourth-hour-label {
+  display: flex;
+  color: #ffff;
+}
+.fourth-hour-temp-text-col {
+  display: flex;
+  justify-content: center;
+}
+.fourth-hour-temp {
+  display: flex;
+  color: #ffff;
+}
+.today-temperature-row {
+  display: flex;
+  margin-top: 40px;
+}
+.today-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.today-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.today-temp-text-col {
+  display: flex;
+}
+.today-temp-text {
+  display: flex;
+  color: #fff9;
+}
+.tomorrow-temperature-row {
+  display: flex;
+  margin-top: 10px;
+}
+.tomorrow-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.tomorrow-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.tomorrow-temp-text-col {
+  display: flex;
+}
+.tomorrow-temp-text {
+  display: flex;
+  color: #fff9;
+}
+.cards-row {
+  display: flex;
+  margin-top: 20px;
+}
+.humidity-card-col {
+  display: flex;
+  justify-content: center;
+}
+.humidity-card {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 80px;
+  background: #fff2;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.weather-humidity-row {
+  display: flex;
+  justify-content: center;
+  color: #ffff;
+}
+.weather-humidity-label {
+  display: flex;
+  margin-top: 5px;
+  font-size: large;
+}
+.humidity-text {
+  display: flex;
+  font-size: larger;
+}
+.wind-speed-card-col {
+  display: flex;
+  justify-content: center;
+}
+.wind-speed-card {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 80px;
+  background: #fff2;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.wind-speed-row {
+  display: flex;
+  justify-content: center;
+  color: #ffff;
+}
+.wind-speed-label {
+  display: flex;
+  margin-top: 5px;
+  font-size: large;
+}
+.Winds-text {
+  display: flex;
+  font-size: larger;
+}
+.feels-like-card-col {
+  display: flex;
+  justify-content: center;
+}
+.feels-like-card {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 80px;
+  background: #fff2;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.feels-like-row {
+  display: flex;
+  justify-content: center;
+  color: #ffff;
+}
+.feels-like-label {
+  display: flex;
+  margin-top: 5px;
+  font-size: large;
+}
+.feels-like-text {
+  display: flex;
+  font-size: larger;
+}
+.one-week-temp-card-row {
+  display: flex;
+  justify-content: center;
+}
+.one-week-temp-card {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  height: 35px;
+  width: 300px;
+  background: #fff4;
+}
+.one-week-temp-button {
+  display: flex;
+  margin-top: 8px;
+  font-size: 2vh;
+  color: #ffff;
 }

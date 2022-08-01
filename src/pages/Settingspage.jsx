@@ -55,7 +55,7 @@ const Settings = () => {
         <IonRow className="settings-row">
           <IonCol>
             <IonIcon
-              className="arrow-back-icon"
+              className="settings-arrow-back-icon"
               icon={arrowBack}
               size="large"
               onClick={Home}

@@ -1,0 +1,190 @@
+.oneweek-main-content {
+  display: flex;
+  --background: rgb(42, 42, 67);
+}
+.oneweek-temp-header-row {
+  display: flex;
+  margin-top: 50px;
+}
+.one-week-temp-arrow-back-icon {
+  display: flex;
+  margin-left: 20px;
+}
+.one-week-temp-forecast-label {
+  display: flex;
+  margin-left: 50px;
+  font-size: 3vh;
+  margin-top: 3px;
+  color: white;
+}
+.one-week-temp-main-grid {
+  background: #fff9;
+  border-radius: 20px;
+  margin-top: 60px;
+}
+.one-week-city-name-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.one-week-city-name-label {
+  display: flex;
+  font-size: 3vh;
+  color: #ffff;
+}
+.one-week-today-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-today-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-today-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-today-temp-text-col {
+  display: flex;
+}
+.one-week-today-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-tomorrow-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-tomorrow-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-tomorrow-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-tomorrow-temp-text-col {
+  display: flex;
+}
+.one-week-tomorrow-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-third-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-third-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-third-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-third-day-temp-text-col {
+  display: flex;
+}
+.one-week-third-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-fourth-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-fourth-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-fourth-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-fourth-day-temp-text-col {
+  display: flex;
+}
+.one-week-fourth-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-fifth-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-fifth-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-fifth-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-fifth-day-temp-text-col {
+  display: flex;
+}
+.one-week-fifth-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-sixth-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-sixth-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-sixth-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-sixth-day-temp-text-col {
+  display: flex;
+}
+.one-week-sixth-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-seventh-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-seventh-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-seventh-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-seventh-day-temp-text-col {
+  display: flex;
+}
+.one-week-seventh-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.one-week-eigth-day-temperature-row {
+  display: flex;
+  margin-top: 30px;
+}
+.one-week-eigth-day-temp-label-col {
+  display: flex;
+  margin-left: 15px;
+}
+.one-week-eigth-day-temp-label {
+  display: flex;
+  color: #ffff;
+}
+.one-week-eigth-day-temp-text-col {
+  display: flex;
+}
+.one-week-eigth-day-temp-text {
+  display: flex;
+  color: #ffff;
+}
+.empty-col {
+  display: flex;
+  margin-top: 10px;
+}

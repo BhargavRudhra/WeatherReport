@@ -155,7 +155,7 @@ const Login = () => {
           </IonRow>
           <IonRow className="login-text-row">
             <IonText className="login-text">
-              If you don't have an account?
+              If you don't have an account ?
               <IonText className="login-signup-text" onClick={Signup}> SignUp </IonText>
               here
             </IonText>

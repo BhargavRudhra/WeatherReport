@@ -14,6 +14,7 @@ import Signup from "./pages/Signuppage";
 import Home from "./pages/Homepage";
 import Settings from "./pages/Settingspage";
 import UserProfile from "./pages/Profilepage";
+import OneweekTemp from "./pages/oneweektemp"
 import { AuthContextProvider } from "./context/AuthContext";
 import { db } from "./firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -139,6 +140,9 @@ const App = () => {
             </Route>
             <Route path="/profilepage">
               <UserProfile />
+            </Route>
+            <Route path="/oneweektemp">
+              <OneweekTemp />
             </Route>
           </IonRouterOutlet>
         </IonReactRouter>

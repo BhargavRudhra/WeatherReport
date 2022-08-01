@@ -15,6 +15,7 @@ export const AuthContextProvider = ({ children }) => {
   const [googleuser, setGoogleUser] = useState([]);
   const [isgooglelogin, setIsGoogleLogin] = useState(false);
   const [iscurrentuser, setIsCurrentUser] = useState([]);
+  const [oneweekweather, setOneweekWeather] = useState(null);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -50,7 +51,9 @@ export const AuthContextProvider = ({ children }) => {
         isgooglelogin,
         setIsGoogleLogin,
         iscurrentuser,
-        setIsCurrentUser
+        setIsCurrentUser,
+        oneweekweather,
+        setOneweekWeather
       }}
     >
       {children}
