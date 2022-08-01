@@ -47,10 +47,10 @@ import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
     present({
       color: "black",
       duration: 2000,
-      position:"Top",
+      position:"top",
       message: message,
       showCloseButton: true,
-      mode: "ios",
+      mode: "md",
     });
   }
   async function handleAlert(message) {

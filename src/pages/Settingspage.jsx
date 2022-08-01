@@ -27,7 +27,7 @@ const Settings = () => {
       position: "top",
       message: message,
       showCloseButton: true,
-      mode: "ios",
+      mode: "md",
     });
   }
   const Home = () => {
@@ -42,6 +42,7 @@ const Settings = () => {
     try {
       await GoogleAuth.signOut();
       router.push("/Loginpage");
+      handleButtonClick("Successfully Loggedout");
     } catch(error){}
   }
   const handleLogout = async () => {

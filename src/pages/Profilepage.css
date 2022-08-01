@@ -1,39 +1,44 @@
-.profile-main-content{
-    display: flex;
-    --background: white;
+.profile-main-content {
+  display: flex;
+  --background: rgb(96, 96, 125);
 }
-.profile-row{
-    display: flex;
-    margin-top: 45px;
+.profile-row {
+  display: flex;
+  margin-top: 45px;
 }
-.profile-arrow-back-icon{
-    display: flex;
-    margin-right: 30px;
-    color: black;
+.profile-arrow-back-icon {
+  display: flex;
+  margin-right: 30px;
+  color: black;
 }
-.profile-col{
-    display: flex;
-    font-size: 25px;
-    margin-right: 140px;
-    color: black;
+.profile-col {
+  display: flex;
+  font-size: 25px;
+  margin-right: 100px;
+  color: black;
 }
-.profile-avatar{
-    display: flex;
-    width: 70px;
-    height: 70px;
-    margin-left: 15px;
+.profile-image-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
-.username-row{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: large;
-    color: black;
+.profile-avatar {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  /* margin-left: 15px; */
 }
-.useremail-row{
-    display: flex;
-    margin-top: 5px;
-    margin-left: 20px;
-    font-size: small;
-    color: black;
+.username-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: large;
+  color: white;
+}
+.useremail-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: small;
+  color: white;
 }

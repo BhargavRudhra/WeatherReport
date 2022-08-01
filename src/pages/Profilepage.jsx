@@ -38,6 +38,7 @@ const UserProfile = () => {
           </IonCol>
           <IonCol className="profile-col"> Profile </IonCol>
         </IonRow>
+        <IonRow className="profile-image-row">
         {
           isgooglelogin ?
           <IonAvatar className="profile-avatar">
@@ -45,6 +46,7 @@ const UserProfile = () => {
         </IonAvatar> :
         <IonLabel> Current user </IonLabel>
         }
+        </IonRow>
         <IonRow className="username-row">
           {
             isgooglelogin ?
