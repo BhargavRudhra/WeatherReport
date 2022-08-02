@@ -33,6 +33,7 @@ const Login = () => {
   const { setGoogleUser } = UserAuth();
   const {setIsGoogleLogin,setIsCurrentUser} = UserAuth();
   const router = useIonRouter();
+  const message = "Welcome To Weather Report Application";
   const clearInputs = () => {
     setEmail("");
     setPassword("");
