@@ -153,7 +153,7 @@ const Home = () => {
               icon={ellipsisVerticalOutline}
               className="dotted-icon"
               size="large"
-              color="lightwhite"
+              color="fullwhite"
               onClick={Settings}
             />
           </IonRow>

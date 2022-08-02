@@ -9,18 +9,21 @@
 .profile-arrow-back-icon {
   display: flex;
   margin-right: 30px;
-  color: black;
 }
 .profile-col {
   display: flex;
   font-size: 25px;
   margin-right: 100px;
-  color: black;
+  color: #ffff;
 }
 .profile-image-row{
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+.email-login-user-image{
+  display: flex;
+  color: #ffff;
 }
 .profile-avatar {
   display: flex;

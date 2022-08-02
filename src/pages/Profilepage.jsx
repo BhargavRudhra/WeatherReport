@@ -32,7 +32,7 @@ const UserProfile = () => {
               className="profile-arrow-back-icon"
               icon={arrowBack}
               size="large"
-              color="fullblack"
+              color="fullwhite"
               onClick={routeToSettingsPage}
             />
           </IonCol>
@@ -44,7 +44,7 @@ const UserProfile = () => {
             <IonAvatar className="profile-avatar">
             <IonImg className="profile-image" src={googleuser.imageUrl} />
           </IonAvatar> :
-          <IonLabel> Current user </IonLabel>
+          <IonLabel className="email-login-user-image"> Current user </IonLabel>
           }
           </IonRow>
         <IonRow className="username-row">
