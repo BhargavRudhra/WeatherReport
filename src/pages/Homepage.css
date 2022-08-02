@@ -295,6 +295,8 @@
   height: 35px;
   width: 300px;
   background: #fff4;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .one-week-temp-button {
   display: flex;
