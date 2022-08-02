@@ -124,9 +124,9 @@ const Home = () => {
       console.log(error);
     }
   };
-  const handleLocationClick = () => {
+  const handleLocationClick =async () => {
     if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
+      await window.navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         setQuery({lat,lon,});
