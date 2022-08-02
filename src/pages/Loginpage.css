@@ -46,6 +46,8 @@
   height: 40px;
   background-color: aliceblue;
   text-align: center;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .login-password-input {
   display: flex;
@@ -56,6 +58,8 @@
   height: 40px;
   background-color: aliceblue;
   text-align: center;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .login-button-row {
   display: flex;
@@ -66,6 +70,8 @@
   display: flex;
   color: black;
   width: 110px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .login-text-row {
   display: flex;
@@ -95,4 +101,6 @@
 .google-avatar{
   display: flex;
   padding: 8px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }

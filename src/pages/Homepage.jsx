@@ -15,7 +15,7 @@ import {
 } from "@ionic/react";
 import { DateTime } from "luxon";
 import "./Homepage.css";
-import { ellipsisVerticalOutline } from "ionicons/icons";
+import { ellipsisVerticalOutline,location } from "ionicons/icons";
 import { useEffect, useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 const API_KEY = "e7e847df4963667bf6f12f51c883214b";
@@ -124,6 +124,15 @@ const Home = () => {
       console.log(error);
     }
   };
+  const handleLocationClick = () => {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        let lat = position.coords.latitude;
+        let lon = position.coords.longitude;
+        setQuery({lat,lon,});
+      });
+    }
+  };
   const Settings = () => {
     router.push("/Settingspage");
   };
@@ -140,6 +149,13 @@ const Home = () => {
               value={city}
               onIonChange={(e) => setCity(e.detail.value)}
               placeholder="Enter City"
+            />
+             <IonIcon
+              icon={location}
+              className="location-icon"
+              size="large"
+              color="lightwhite"
+              onClick={handleLocationClick}
             />
             <IonButton
               className="search-button"

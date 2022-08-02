@@ -54,4 +54,6 @@
   font-size: medium;
   width: 210px;
   height: 40px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }

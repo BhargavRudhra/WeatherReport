@@ -18,8 +18,8 @@
 .search-input {
   display: flex;
   text-align: center;
-  width: 240px;
-  margin-left: 20px;
+  width: 200px;
+  margin-left: 10px;
   margin-right: 10px;
   border-radius: 15px;
   background: #fff7;
@@ -29,6 +29,11 @@
   width: 70px;
   height: 35px;
   color: black;
+}
+.location-icon{
+  display: flex;
+  margin-top: 5px;
+  margin-right: 10px;
 }
 .dotted-icon {
   display: flex;
@@ -295,6 +300,8 @@
   height: 35px;
   width: 300px;
   background: #fff4;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }
 .one-week-temp-button {
   display: flex;
