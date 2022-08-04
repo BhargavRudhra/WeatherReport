@@ -54,7 +54,7 @@ const App = () => {
       animated: true,
       duration : 2000,
       color: "lightwhite",
-      mode: "md",
+      mode: "ios",
     });
   };
   const handleAlert = (msg, title, btn, appVersion) => {
@@ -69,7 +69,7 @@ const App = () => {
           handler:async () => {
             handleToast("Download Clicked");
             await Browser.open({
-              url: "",
+              url: "https://play.google.com/store/apps/details?id=com.WeatherReport.app",
             });
           },
         },
