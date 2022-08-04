@@ -18,6 +18,7 @@ import "./Signuppage.css";
 import weatherimage from "../assets/weatherimage.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
+import emailjs from '@emailjs/browser';
 const Signup = () => {
   const [present] = useIonToast();
   const [presentAlert] = useIonAlert();
@@ -27,6 +28,7 @@ const Signup = () => {
   const [setError] = useState("");
   const [presentloading, dismissloading] = useIonLoading();
   const { createUser } = UserAuth();
+  const fromname = "Weather Report";
   const router = useIonRouter();
   const clearInputs = () => {
     setUsername("");
@@ -56,6 +58,19 @@ const Signup = () => {
       mode: "ios",
     });
   }
+  var templateParams = {
+    email: email,
+    to_name: username,
+    from_name: fromname
+  };
+  const sendEmail = async (e) =>{
+    await emailjs.send("service_oo65zk8", "template_9tr0oyg", templateParams,"Zo4p2NqWNWm23MhlF")
+    .then((result) => {
+      console.log(result.text);
+    },(error) =>{
+      console.log(error.text);
+    });
+   };
   const handleSubmit = async (e) => {
     var atposition = email.indexOf("@");
     var dotposition = email.lastIndexOf(".");
@@ -83,6 +98,7 @@ const Signup = () => {
         await createUser(email, password);
         dismissloading();
         handleButtonClick("User Added");
+        sendEmail();
         clearInputs();
         router.push("/Loginpage");
       } catch (e) {

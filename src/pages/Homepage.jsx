@@ -10,14 +10,17 @@ import {
   IonLabel,
   IonButton,
   IonText,
-  IonInput,
-  IonTitle,
+  useIonLoading,
+  IonSearchbar,
 } from "@ionic/react";
 import { DateTime } from "luxon";
 import "./Homepage.css";
 import { ellipsisVerticalOutline,location } from "ionicons/icons";
 import { useEffect, useState } from "react";
 import { UserAuth } from "../context/AuthContext";
+import Citiesdata from "./Cities.json";
+import axios from "axios";
+import { setConstantValue } from "typescript";
 const API_KEY = "e7e847df4963667bf6f12f51c883214b";
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 const Home = () => {
@@ -25,7 +28,26 @@ const Home = () => {
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState();
   const [query, setQuery] = useState();
+  const [data, setData] = useState([]);
+  const [getcity, setGetCity] = useState();
   const { setOneweekWeather } = UserAuth();
+  const [presentloading, dismissloading] = useIonLoading();
+  const Getcountry = () => {
+    useEffect(() => {
+      axios.get('https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json')
+      .then(res => setData(res.data))
+      .catch(err => console.log(err))
+    },[])
+  };
+  Getcountry();
+  console.log(data);
+  console.log(JSON.stringify(data));
+  const country =[...new Set(data.map(item => item.country))]
+  country.sort();
+  console.log(country);
+  const onSearch=(searchTerm) => {
+    setCity(searchTerm);
+  };
   const getWeatherData = (infoType, searchParams) => {
     const url = new URL(BASE_URL + "/" + infoType);
     url.search = new URLSearchParams({ ...searchParams, appid: API_KEY });
@@ -114,12 +136,18 @@ const Home = () => {
   const router = useIonRouter();
   const setQueryInfo = () => {
     try {
+      presentloading({
+        message: "Getting Data",
+        duration: 200,
+        spinner: "lines-small",
+      });
       let query = {
         q: `${city}`,
       };
       console.log(JSON.stringify(query));
       setQuery(query);
       setCity("");
+      dismissloading();
     } catch (error) {
       console.log(error);
     }
@@ -144,12 +172,14 @@ const Home = () => {
       <IonContent className="home-main-content">
         <IonGrid className="home-main-grid">
           <IonRow className="homepage-first-row">
-            <IonInput
+            <IonSearchbar
               className="search-input"
               value={city}
               onIonChange={(e) => setCity(e.detail.value)}
               placeholder="Enter City"
-            />
+              color="fullwhite"
+            >  
+            </IonSearchbar>
              <IonIcon
               icon={location}
               className="location-icon"
@@ -173,6 +203,30 @@ const Home = () => {
               onClick={Settings}
             />
           </IonRow>
+          <IonGrid>
+          { city &&
+                Citiesdata
+                .filter((citydata) => {
+                  const searchTerm = city.toLowerCase();
+                  const cityname = citydata.name.toLowerCase();
+                  return (
+                    searchTerm &&
+                    cityname.startsWith(searchTerm) &&
+                    cityname !== searchTerm
+                  );
+                })
+                .slice(0,10)
+                .map((citydata) => (
+                  <IonRow
+                  className="citiesdata"
+                  key={citydata.name} onClick={() => onSearch(citydata.name)} value={city}>
+                    {city &&
+                    <IonLabel className="cityname-label">{citydata.name}</IonLabel>
+                    }
+                  </IonRow>
+                ))
+              }
+              </IonGrid>
           <IonRow className="city-name-row">
             {weather && (
               <IonLabel className="city-name-label"> {weather.name} </IonLabel>

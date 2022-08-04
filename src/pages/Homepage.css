@@ -12,32 +12,41 @@
 }
 .homepage-first-row {
   display: flex;
-  justify-content: flex-end;
   margin-top: 28px;
 }
 .search-input {
   display: flex;
   text-align: center;
-  width: 200px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 15px;
-  background: #fff7;
+  width: 230px;
+  --border-radius: 12px;
+}
+.location-icon{
+  display: flex;
+  margin-top: 13px;
 }
 .search-button {
   display: flex;
   width: 70px;
   height: 35px;
   color: black;
-}
-.location-icon{
-  display: flex;
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-top: 13px;
 }
 .dotted-icon {
   display: flex;
-  margin-top: 5px;
+  margin-top: 12px;
+  margin-left: 5px;
+}
+.citiesdata{
+  display: flex;
+  flex-direction: column;
+  background: border-box;
+  background-color: #ffff;
+  width: 180px;
+}
+.cityname-label{
+  display: flex;
+  margin-top: 8px;
+  color: black;
 }
 .city-name-row {
   display: flex;

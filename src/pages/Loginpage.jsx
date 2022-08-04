@@ -1,7 +1,6 @@
 import {
   IonAvatar,
   IonButton,
-  IonCol,
   IonContent,
   IonGrid,
   IonImg,
@@ -18,10 +17,9 @@ import {
 import "./Loginpage.css";
 import weatherimage from "../assets/weatherimage.png";
 import Googleimage from "../assets/google-icon.jpg";
-import facebook from "../assets/fac.png";
 import { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
-import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth";
+import { GoogleAuth } from "@codetrix-studio/capacitor-google-auth"; 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
