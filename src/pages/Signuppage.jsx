@@ -44,7 +44,7 @@ const Signup = () => {
       header: "Alert",
       message: message,
       buttons: ["OK"],
-      mode: "ios",
+      mode: "md",
       color: "darkgreen",
     });
   }
@@ -55,7 +55,7 @@ const Signup = () => {
       position: "top",
       message: message,
       showCloseButton: true,
-      mode: "ios",
+      mode: "md",
     });
   }
   var templateParams = {

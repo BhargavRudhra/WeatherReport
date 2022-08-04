@@ -54,7 +54,7 @@ const App = () => {
       animated: true,
       duration : 2000,
       color: "lightwhite",
-      mode: "ios",
+      mode: "md",
     });
   };
   const handleAlert = (msg, title, btn, appVersion) => {
