@@ -20,7 +20,6 @@ import { useEffect, useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import Citiesdata from "./Cities.json";
 import axios from "axios";
-import { setConstantValue } from "typescript";
 const API_KEY = "e7e847df4963667bf6f12f51c883214b";
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 const Home = () => {
@@ -29,7 +28,6 @@ const Home = () => {
   const [weather, setWeather] = useState();
   const [query, setQuery] = useState();
   const [data, setData] = useState([]);
-  const [getcity, setGetCity] = useState();
   const { setOneweekWeather } = UserAuth();
   const [presentloading, dismissloading] = useIonLoading();
   const Getcountry = () => {
@@ -154,7 +152,7 @@ const Home = () => {
   };
   const handleLocationClick =async () => {
     if(navigator.geolocation) {
-      await window.navigator.geolocation.getCurrentPosition((position) => {
+      await navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
         setQuery({lat,lon,});
